@@ -277,8 +277,8 @@
     .security-item { border: 1px solid var(--line); border-radius: 15px; padding: 17px; background: rgba(255,255,255,.5); }
     .security-item b { display: block; margin-bottom: 7px; }
     .security-item span { color: var(--muted); font-size: 12px; line-height: 1.7; }
-    .usage-ring { width: 144px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--gold) 0 38%, #e7e0d5 38% 100%); margin: 10px auto; }
-    .usage-ring::after { content: "正常\A 38%"; white-space: pre; width: 105px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--forest); background: var(--white); font-weight: 800; line-height: 1.45; }
+    .usage-ring { width: 144px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--gold) 0 100%); margin: 10px auto; }
+    .usage-ring::after { content: "运行\A 正常"; white-space: pre; width: 105px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--forest); background: var(--white); font-weight: 800; line-height: 1.45; }
 
     .modal { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 20px; background: rgba(9,20,16,.62); backdrop-filter: blur(10px); }
     .modal-card { width: min(720px, 100%); max-height: 85vh; overflow: auto; border-radius: 24px; background: var(--white); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
@@ -566,7 +566,7 @@
     .file-card button { color: #5f57dd; }
     .memory-icon { color: #5f58cf; background: #eceaff; }
     .memory-item em { color: #5550bd; }
-    .usage-ring { background: conic-gradient(#756cf2 0 38%, #ececf0 38% 100%); }
+    .usage-ring { background: conic-gradient(#756cf2 0 100%); }
     .usage-ring::after { color: #222228; background: #fff; }
     .modal { background: rgba(12,12,16,.46); }
     .modal-card { background: rgba(255,255,255,.94); backdrop-filter: blur(28px); }
@@ -1048,7 +1048,7 @@
     .file-type { color: #151725; background: linear-gradient(145deg, #fff, #c6ceff); }
     .file-card button, .memory-item em { color: #cbd1ff; }
     .memory-icon { color: #ebedff; border: 1px solid rgba(205,211,255,.20); background: rgba(151,161,255,.14); }
-    .usage-ring { background: conic-gradient(#b6c2ff 0 38%, rgba(255,255,255,.10) 38% 100%); box-shadow: 0 0 50px rgba(116,143,255,.14); }
+    .usage-ring { background: conic-gradient(#b6c2ff 0 100%); box-shadow: 0 0 50px rgba(116,143,255,.14); }
     .usage-ring::after { color: #f5f6ff; background: rgba(10,13,25,.88); box-shadow: inset 0 1px rgba(255,255,255,.10); }
     .modal { background: rgba(2,4,11,.60); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
     .modal-card {
@@ -1243,7 +1243,7 @@
     .file-type { color: #fff; background: linear-gradient(145deg, #354262, #182134); }
     .file-card button, .memory-item em { color: #5c6fc6; }
     .memory-icon { color: #5668bd; border-color: rgba(108,126,211,.18); background: rgba(119,136,219,.10); }
-    .usage-ring { background: conic-gradient(#7183d8 0 38%, rgba(75,90,120,.09) 38% 100%); box-shadow: 0 0 44px rgba(98,119,211,.12); }
+    .usage-ring { background: conic-gradient(#7183d8 0 100%); box-shadow: 0 0 44px rgba(98,119,211,.12); }
     .usage-ring::after { color: #172033; background: rgba(255,255,255,.86); box-shadow: inset 0 1px #fff; }
     .modal { background: rgba(227,232,242,.66); }
     .modal-card { color: #172033; border-color: rgba(255,255,255,.95); background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(245,248,253,.84)); box-shadow: 0 34px 90px rgba(71,87,120,.18), inset 0 1px #fff; }
@@ -1489,6 +1489,10 @@
     .value-strip h1 { margin: 5px 0 7px; max-width: 680px; color: #182239; font: 600 clamp(22px, 3vw, 34px)/1.24 var(--font-display); letter-spacing: -.035em; }
     .value-strip p { margin: 0; color: rgba(45,57,80,.62); font-size: 12px; line-height: 1.75; }
     .value-strip .mini-action { flex: 0 0 auto; padding: 10px 15px; border: 1px solid rgba(91,108,152,.16); border-radius: 14px; color: #34425f; background: rgba(255,255,255,.72); font-size: 11px; font-weight: 700; }
+    .service-proof-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-top: 14px; }
+    .service-proof { padding: 10px 11px; border: 1px solid rgba(255,255,255,.9); border-radius: 13px; background: rgba(255,255,255,.58); }
+    .service-proof b { display: block; margin-bottom: 2px; color: #31405e; font-size: 11px; }
+    .service-proof span { color: rgba(59,72,98,.52); font-size: 9px; line-height: 1.5; }
     .workflow-rail { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; margin-top: 15px; }
     .workflow-step { position: relative; min-width: 0; padding: 10px 11px; border: 1px solid rgba(255,255,255,.9); border-radius: 14px; background: rgba(255,255,255,.56); }
     .workflow-step b { display: block; margin-bottom: 3px; color: #293751; font-size: 11px; }
@@ -1561,10 +1565,21 @@
     .service-result { padding: 12px; border: 1px solid rgba(99,117,168,.10); border-radius: 14px; background: rgba(248,250,255,.7); }
     .service-result b { display: block; margin-bottom: 4px; color: #33415c; font-size: 10px; }
     .service-result span { color: rgba(56,70,95,.52); font-size: 9px; line-height: 1.6; }
+    .boundary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 15px; }
+    .boundary-card { padding: 18px; border: 1px solid rgba(102,120,171,.12); border-radius: 18px; background: rgba(255,255,255,.58); }
+    .boundary-card.included { background: linear-gradient(135deg,rgba(236,244,255,.78),rgba(255,255,255,.62)); }
+    .boundary-card.upgrade { background: linear-gradient(135deg,rgba(236,249,243,.78),rgba(255,255,255,.62)); }
+    .boundary-card h4 { margin: 0 0 12px; color: #27344f; font-size: 14px; }
+    .boundary-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .boundary-list li { position: relative; padding-left: 18px; color: rgba(48,62,88,.68); font-size: 11px; line-height: 1.65; }
+    .boundary-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #6680d0; font-weight: 800; }
+    .boundary-card.upgrade .boundary-list li::before { content: "+"; color: #44a07d; }
+    .boundary-rule { margin-top: 14px; padding: 13px 15px; border-radius: 14px; color: #43558f; background: rgba(232,237,255,.76); font-size: 11px; font-weight: 700; line-height: 1.7; text-align: center; }
 
     @media (max-width: 920px) {
       .section-grid { grid-template-columns: 1fr; }
       .story-metrics, .workflow-rail { grid-template-columns: repeat(2,1fr); }
+      .service-proof-bar { grid-template-columns: repeat(2,1fr); }
       .project-board { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 680px) {
@@ -1577,6 +1592,7 @@
       .story-banner h2 { font-size: 25px; }
       .story-metrics { grid-template-columns: 1fr 1fr; }
       .project-board, .service-sheet { grid-template-columns: 1fr; }
+      .boundary-grid { grid-template-columns: 1fr; }
       .audio-card { grid-template-columns: 42px 1fr; }
       .audio-card .primary-small { grid-column: 1 / -1; width: 100%; }
       .analysis-progress { grid-template-columns: repeat(4,1fr); }
@@ -1596,12 +1612,12 @@
         <p class="lead">它了解你的经历、作品、资源与目标，把一个模糊想法变成可以直接讨论、合作和执行的完整项目。</p>
         <div class="actions">
           <button class="primary" id="enterDemo">进入私人办公室演示</button>
-          <button class="secondary" id="showPromise">查看服务承诺</button>
+          <button class="secondary" id="showPromise">查看平台原则</button>
         </div>
         <div class="trust-line">
           <div class="trust-item"><strong>1对1</strong><span>每位客户独立建立，不使用通用模板应付</span></div>
           <div class="trust-item"><strong>21天</strong><span>围绕一个真实重要项目完成首轮建设</span></div>
-          <div class="trust-item"><strong>¥20,000+</strong><span>限量深度服务，不出售廉价聊天账号</span></div>
+          <div class="trust-item"><strong>本人可控</strong><span>重要动作需确认，资料可以导出和删除</span></div>
         </div>
       </div>
       <div class="welcome-visual">
@@ -1636,7 +1652,7 @@
         <button data-page="resources">资源地图</button>
         <button data-page="deliverables">交付中心</button>
         <button data-page="memory">私人记忆</button>
-        <button data-page="security">安全与额度</button>
+        <button data-page="security">安全与控制</button>
       </nav>
       <div class="sidebar-note">本页面全部采用虚构人物与虚构项目。正式客户拥有独立空间，重要对外动作必须本人确认。</div>
     </aside>
@@ -1646,8 +1662,14 @@
         <div class="chat-first">
           <section class="value-strip" aria-label="服务价值与工作流程">
             <div class="value-strip-top">
-              <div><p class="agent-kicker">PRIVATE STRATEGY SYSTEM</p><h1>把散落的想法、资源和项目，变成清晰的下一步。</h1><p>它不只回答问题，而是持续理解你的经历、判断和边界，把一次谈话推进成可以使用的事业成果。</p></div>
-              <button class="mini-action" data-open-service>查看21天交付成果</button>
+              <div><p class="agent-kicker">PRIVATE STRATEGY SYSTEM</p><h1>一套真正围绕你工作的私人事业办公室。</h1><p>围绕一个真实重要项目，持续完成理解、诊断、全案、正式材料和推进，让每次对话都沉淀为可以继续使用的成果。</p></div>
+              <button class="mini-action" data-open-service>查看旗舰项目完整能力</button>
+            </div>
+            <div class="service-proof-bar" aria-label="旗舰项目服务摘要">
+              <div class="service-proof"><b>90分钟深度理解</b><span>访谈、经历、资源与边界</span></div>
+              <div class="service-proof"><b>一个旗舰项目全案</b><span>诊断、预算、时间表与材料</span></div>
+              <div class="service-proof"><b>4份推进周报</b><span>加2次策略沟通与2轮修改</span></div>
+              <div class="service-proof"><b>30天调整支持</b><span>项目内灵感研究已经包含</span></div>
             </div>
             <div class="workflow-rail">
               <div class="workflow-step done"><b>01 深度访谈</b><span>理解目标、经历与边界</span></div>
@@ -1664,7 +1686,7 @@
             <div class="chat-stream" id="chatStream" aria-live="polite">
               <div class="message-row assistant">
                 <div class="message-avatar">知</div>
-                <div class="message-bubble"><div class="message-meta">知域智能体 · 刚刚</div><p>早上好，林岚。我已经结合昨天48分钟的访谈、你的90天目标和合作方反馈，整理好了今天最值得推进的事情。</p><div class="focus-note"><b>今天的关键判断</b><span>先确定“回声之城”的主办方式和预算上限，再继续扩展方案。否则后面的机构邀约会缺少清晰边界。</span></div><div class="chat-context-card"><div class="context-head"><strong>昨日访谈已完成分析</strong><em>人工审核通过</em></div><p>识别出3项核心目标、2个潜在风险、6条可用资源和4项下一步行动。</p><div class="context-links"><button data-go-page="interview">查看访谈分析</button><button data-go-page="workspace">打开今日工作台</button></div></div></div>
+                <div class="message-bubble"><div class="message-meta">知域智能体 · 刚刚</div><p>早上好，林岚。我已经结合昨天48分钟的访谈、你的90天目标和合作方反馈，整理好了今天最值得推进的事情。</p><div class="focus-note"><b>今天的关键判断</b><span>先确定“回声之城”的主办方式和预算上限，再继续扩展方案。否则后面的机构邀约会缺少清晰边界。</span></div><div class="chat-context-card"><div class="context-head"><strong>昨日访谈已完成分析</strong><em>人工审核通过</em></div><p>识别出3项核心目标、2个潜在风险、6条可用资源和4项下一步行动。</p><div class="context-links"><button data-go-page="interview">查看访谈分析</button><button data-go-page="workspace">打开今日工作台</button><button data-open-boundary>查看当前能力范围</button></div></div></div>
               </div>
               <div class="message-row assistant">
                 <div class="message-avatar">知</div>
@@ -1772,8 +1794,9 @@
       </section>
 
       <section class="page hidden" data-page-panel="deliverables">
-        <div class="topbar"><div><h2>交付中心</h2><p>客户支付的是可以直接使用的正式成果，而不是聊天记录。</p></div><div class="date-pill">已完成3 · 制作中1</div></div>
+        <div class="topbar"><div><h2>交付中心</h2><p>把讨论沉淀为可以直接使用、继续修改和随时带走的正式成果。</p></div><div class="date-pill">已完成3 · 制作中1</div></div>
         <article class="card"><div class="card-title"><h3>本项目正式材料</h3><small>点击查看演示内容</small></div><div class="deliverables"><div class="file-card"><div class="file-type">方案</div><h4>完整项目策划书</h4><p>项目定位、作品结构、观众路径、预算与风险，共28页。</p><button data-file="plan">预览内容 →</button></div><div class="file-card"><div class="file-type">演示</div><h4>机构会谈演示文稿</h4><p>面向合作机构的15页视觉化提案，避免学术语言过重。</p><button data-file="deck">预览内容 →</button></div><div class="file-card"><div class="file-type">执行</div><h4>90天行动与预算表</h4><p>三档预算、每周任务、负责人、截止时间与风险备用方案。</p><button data-file="action">预览内容 →</button></div></div></article>
+        <article class="card"><div class="card-title"><h3>当前核心能力与可选扩展</h3><small>所有扩展能力都由本人确认后启用</small></div><div class="boundary-grid"><section class="boundary-card included"><h4>当前空间已经启用</h4><ul class="boundary-list"><li>一个旗舰项目的诊断、全案、工作台和正式成果</li><li>项目内每周一次灵感与方向研究</li><li>4份推进周报、2次策略沟通和2轮集中修改</li><li>与项目直接相关的文化、行程和会议信息整理</li></ul></section><section class="boundary-card upgrade"><h4>可以继续扩展</h4><ul class="boundary-list"><li>新增第二个项目，或为重大范围变化建立独立工作区</li><li>启用30天或90天专属灵感专家</li><li>开启优先响应、加急交付或高频临时支持</li><li>增加长期生活规划、第三方协调或新的隐私授权</li></ul></section></div><div class="boundary-rule">新模块不会自行开启；每一次能力扩展、资料调用和权限变化都需要本人确认。</div></article>
       </section>
 
       <section class="page hidden" data-page-panel="memory">
@@ -1782,8 +1805,8 @@
       </section>
 
       <section class="page hidden" data-page-panel="security">
-        <div class="topbar"><div><h2>安全与服务额度</h2><p>重要操作必须确认，正常使用不会突然停用或自动扣费。</p></div><div class="date-pill">状态正常</div></div>
-        <div class="grid"><article class="card span-7"><div class="card-title"><h3>账户保护</h3><small>演示规则</small></div><div class="security-grid"><div class="security-item"><b>客户空间完全分开</b><span>每位客户的资料、项目和使用记录相互隔离。</span></div><div class="security-item"><b>重要动作再次确认</b><span>发送、发布、报价、签约等行为不能自行执行。</span></div><div class="security-item"><b>异常登录提醒</b><span>陌生设备或连续错误登录会触发提醒和保护。</span></div><div class="security-item"><b>资料可导出和删除</b><span>客户可以带走自己的资料，也可以结束服务后清空。</span></div></div></article><article class="card span-5"><div class="card-title"><h3>本月服务状态</h3><small>不展示难懂的Token</small></div><div class="usage-ring"></div><p style="color:var(--muted);font-size:12px;line-height:1.8;text-align:center">使用量正常。达到80%会提前提醒；任何增加费用的行为，都必须得到本人确认。</p></article></div>
+        <div class="topbar"><div><h2>安全与控制</h2><p>重要操作必须确认，资料、权限和功能范围始终由本人掌握。</p></div><div class="date-pill">状态正常</div></div>
+        <div class="grid"><article class="card span-7"><div class="card-title"><h3>账户保护</h3><small>演示规则</small></div><div class="security-grid"><div class="security-item"><b>客户空间完全分开</b><span>每位客户的资料、项目和使用记录相互隔离。</span></div><div class="security-item"><b>重要动作再次确认</b><span>发送、发布、报价、签约等行为不能自行执行。</span></div><div class="security-item"><b>异常登录提醒</b><span>陌生设备或连续错误登录会触发提醒和保护。</span></div><div class="security-item"><b>资料可导出和删除</b><span>客户可以带走自己的资料，也可以结束使用后清空。</span></div></div></article><article class="card span-5"><div class="card-title"><h3>私人空间状态</h3><small>系统运行稳定</small></div><div class="usage-ring"></div><p style="color:var(--muted);font-size:12px;line-height:1.8;text-align:center">访谈、项目、记忆和正式成果均已同步。新模块、外部连接和权限变化不会自动开启，必须由本人确认。</p></article></div>
       </section>
     </main>
   </section>
@@ -1806,8 +1829,8 @@
     });
 
     document.getElementById('showPromise').addEventListener('click', () => {
-      modalTitle.textContent = '高端私人服务承诺';
-      modalBody.innerHTML = `<h4>客户支付的是结果、持续与安全</h4><ul><li>展示版只使用虚构资料，不假装已经连接真实客户账户。</li><li>正式服务从一个真实重要项目开始，所有成果都能直接用于讨论、合作或执行。</li><li>客户资料相互隔离，不拿一位客户的隐私服务另一位客户。</li><li>重要决定、对外联系、发送和发布必须由客户确认。</li><li>服务范围、持续时间和额外费用在签约前写清楚，不自动扣费。</li></ul><div class="disclaimer">本页面是用于沟通产品体验的展示版，不代表正式账户已经开通。正式版将在签约后，根据客户授权资料单独建立。</div>`;
+      modalTitle.textContent = '私人平台运行原则';
+      modalBody.innerHTML = `<h4>结果、持续、安全与本人控制</h4><ul><li>展示版只使用虚构资料，不假装已经连接真实客户账户。</li><li>平台围绕一个真实重要项目工作，成果可以直接用于讨论、合作或执行。</li><li>每位客户拥有相互隔离的私人空间，不混用不同客户的资料。</li><li>重要决定、对外联系、发送和发布必须由客户确认。</li><li>资料、功能范围、外部连接和权限变化始终透明，并由本人控制。</li></ul><div class="disclaimer">本页面用于展示成品平台的工作体验。正式账户会根据客户确认的资料范围和权限单独建立。</div>`;
       modal.classList.remove('hidden');
     });
 
@@ -1824,8 +1847,16 @@
 
     document.querySelectorAll('[data-open-service]').forEach(button => {
       button.addEventListener('click', () => {
-        modalTitle.textContent = '21天私人事业系统 · 交付成果';
-        modalBody.innerHTML = `<h4>客户购买的是一套可以使用的事业成果</h4><div class="service-sheet"><div class="service-result"><b>深度访谈与分析</b><span>理解经历、目标、资源、困难和不能妥协的边界。</span></div><div class="service-result"><b>私人资料体系</b><span>整理作品、项目、关系和重要决定，建立本人可控制的记忆。</span></div><div class="service-result"><b>一个旗舰项目全案</b><span>包含定位、路径、预算、风险与90天执行安排。</span></div><div class="service-result"><b>三类正式材料</b><span>企划书、会谈材料和行动预算表，可直接用于推进项目。</span></div><div class="service-result"><b>私人智能体入口</b><span>持续对话、研究、起草、整理和提醒，不只是一次性交付。</span></div><div class="service-result"><b>30天调整支持</b><span>根据真实反馈修正资料、判断和项目安排。</span></div></div><div class="disclaimer">演示价格从人民币20,000元起。服务范围、修改次数、使用期限和任何额外费用均应在签约前写清楚；不自动扣费，不以难懂的Token向客户临时收费。</div>`;
+        modalTitle.textContent = '旗舰项目私人办公室';
+        modalBody.innerHTML = `<h4>围绕一个真实重要项目建立的完整工作系统</h4><div class="service-sheet"><div class="service-result"><b>深度访谈与私人档案</b><span>理解经历、目标、资源、困难、偏好和不能妥协的边界。</span></div><div class="service-result"><b>项目诊断与机会风险清单</b><span>识别真正卡点、优先项目、机会、风险和暂缓事项。</span></div><div class="service-result"><b>一个旗舰项目全案</b><span>包含定位、路径、资源顺序、预算、时间表与90天安排。</span></div><div class="service-result"><b>可以直接使用的正式成果</b><span>企划书、会谈材料、资源地图、行动预算表和决定记录。</span></div><div class="service-result"><b>持续推进与项目内灵感研究</b><span>定期形成推进周报，并提供与当前项目有关的方向观察。</span></div><div class="service-result"><b>真人策略与修改</b><span>关键节点进行策略沟通和集中修改，重要判断经过人工审核。</span></div><div class="service-result"><b>私人智能体与工作台</b><span>持续对话、研究、起草、整理和提醒，不只是一次性交付。</span></div><div class="service-result"><b>调整与资料控制</b><span>根据真实反馈修正资料和项目安排，并支持查看、导出与删除。</span></div></div><div class="disclaimer">这是成品平台的能力演示。具体模块会根据客户本人确认的项目目标、资料范围和权限单独建立。</div>`;
+        modal.classList.remove('hidden');
+      });
+    });
+
+    document.querySelectorAll('[data-open-boundary]').forEach(button => {
+      button.addEventListener('click', () => {
+        modalTitle.textContent = '当前能力范围';
+        modalBody.innerHTML = `<h4>核心能力已经启用，扩展模块由本人决定</h4><div class="boundary-grid"><section class="boundary-card included"><h4>当前空间已经启用</h4><ul class="boundary-list"><li>一个旗舰项目的诊断、全案、正式成果和持续调整</li><li>项目内定期灵感研究与推进周报</li><li>关键节点的策略沟通和集中修改</li><li>与项目直接相关的文化、行程和会议信息整理</li></ul></section><section class="boundary-card upgrade"><h4>可以继续扩展</h4><ul class="boundary-list"><li>新增第二个项目或建立独立工作区</li><li>启用长期专属灵感专家</li><li>开启优先响应、加急交付或高频临时支持</li><li>增加长期生活规划、第三方协调或新的隐私授权</li></ul></section></div><div class="boundary-rule">新模块、外部连接和权限变化不会自行开启，必须由本人确认。</div>`;
         modal.classList.remove('hidden');
       });
     });
