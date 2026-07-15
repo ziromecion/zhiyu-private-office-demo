@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>知域 Private Office｜高端私人事业办公室演示</title>
-  <meta name="description" content="面向艺术家与企业家的高端私人事业办公室演示环境。" />
+  <title>知域 Private Office｜把想法推进成事业成果</title>
+  <meta name="description" content="把散落的想法、资源和项目，整理成可以执行的事业计划。面向艺术家与企业家的私人事业办公室演示。" />
   <meta name="theme-color" content="#f5f7fb" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="知域 Private Office｜私人事业智能体" />
-  <meta property="og:description" content="为艺术家与企业家量身建立的私人事业智能体演示。" />
+  <meta property="og:description" content="从访谈、分析、企划到执行，展示私人事业智能体如何推进一个真实重要项目。" />
   <style>
     :root {
       --ink: #17201c;
@@ -1461,6 +1461,128 @@
       .chat-starters button { flex: 0 0 auto; }
       .composer-footer small { max-width: 220px; }
     }
+
+    /* 结果导向升级：访谈 → 分析 → 企划 → 执行 */
+    .value-strip {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.92);
+      border-radius: 22px;
+      background: linear-gradient(125deg, rgba(255,255,255,.86), rgba(242,246,255,.72));
+      box-shadow: 0 18px 42px rgba(67,83,116,.08), inset 0 1px #fff;
+    }
+    .value-strip::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -100px;
+      top: -130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(145,168,255,.24), transparent 68%);
+      pointer-events: none;
+    }
+    .value-strip-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; }
+    .value-strip h1 { margin: 5px 0 7px; max-width: 680px; color: #182239; font: 600 clamp(22px, 3vw, 34px)/1.24 var(--font-display); letter-spacing: -.035em; }
+    .value-strip p { margin: 0; color: rgba(45,57,80,.62); font-size: 12px; line-height: 1.75; }
+    .value-strip .mini-action { flex: 0 0 auto; padding: 10px 15px; border: 1px solid rgba(91,108,152,.16); border-radius: 14px; color: #34425f; background: rgba(255,255,255,.72); font-size: 11px; font-weight: 700; }
+    .workflow-rail { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; margin-top: 15px; }
+    .workflow-step { position: relative; min-width: 0; padding: 10px 11px; border: 1px solid rgba(255,255,255,.9); border-radius: 14px; background: rgba(255,255,255,.56); }
+    .workflow-step b { display: block; margin-bottom: 3px; color: #293751; font-size: 11px; }
+    .workflow-step span { display: block; overflow: hidden; color: rgba(59,72,98,.52); font-size: 9px; white-space: nowrap; text-overflow: ellipsis; }
+    .workflow-step.done::before { content: "✓"; position: absolute; right: 8px; top: 8px; color: #42a07b; font-size: 10px; }
+    .workflow-step.current { border-color: rgba(111,133,223,.28); background: linear-gradient(135deg, rgba(235,239,255,.92), rgba(255,255,255,.72)); }
+
+    .chat-context-card { margin-top: 10px; padding: 12px 13px; border: 1px solid rgba(101,124,209,.14); border-radius: 15px; background: linear-gradient(135deg, rgba(238,242,255,.82), rgba(255,255,255,.62)); }
+    .chat-context-card .context-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
+    .chat-context-card strong { color: #4a5ca8; font-size: 11px; }
+    .chat-context-card em { color: #409475; font-size: 9px; font-style: normal; }
+    .chat-context-card p { color: rgba(47,61,88,.66); font-size: 11px; line-height: 1.7; }
+    .context-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
+    .context-links button, .text-action { padding: 7px 10px; border: 1px solid rgba(100,118,177,.14); border-radius: 10px; color: #43558f; background: rgba(255,255,255,.72); font-size: 9px; font-weight: 700; }
+
+    .story-banner { margin-bottom: 18px; padding: 22px; border: 1px solid rgba(255,255,255,.92); border-radius: 24px; background: linear-gradient(135deg, rgba(255,255,255,.84), rgba(238,243,255,.68)); box-shadow: 0 18px 52px rgba(63,79,113,.08), inset 0 1px #fff; }
+    .story-banner h2 { margin: 6px 0 8px; color: #172138; font: 600 clamp(24px,3vw,36px)/1.22 var(--font-display); letter-spacing: -.035em; }
+    .story-banner > p { max-width: 760px; margin: 0; color: rgba(47,60,84,.62); font-size: 12px; line-height: 1.8; }
+    .story-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 18px; }
+    .story-metric { padding: 13px; border: 1px solid rgba(255,255,255,.9); border-radius: 15px; background: rgba(255,255,255,.54); }
+    .story-metric b { display: block; color: #25334e; font-size: 17px; }
+    .story-metric span { color: rgba(55,69,94,.5); font-size: 9px; }
+
+    .section-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 14px; }
+    .glass-panel { padding: 18px; border: 1px solid rgba(255,255,255,.92); border-radius: 21px; background: rgba(255,255,255,.65); box-shadow: 0 15px 40px rgba(65,82,114,.07), inset 0 1px #fff; }
+    .panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 15px; }
+    .panel-head h3 { margin: 0 0 4px; color: #23304a; font-size: 15px; }
+    .panel-head p { margin: 0; color: rgba(56,69,94,.5); font-size: 9px; line-height: 1.6; }
+    .status-badge { flex: 0 0 auto; padding: 6px 9px; border-radius: 999px; color: #3f8d70; background: rgba(222,246,237,.82); font-size: 9px; font-weight: 700; }
+    .status-badge.blue { color: #5368b5; background: rgba(231,236,255,.86); }
+    .audio-card { display: grid; grid-template-columns: 46px 1fr auto; align-items: center; gap: 12px; padding: 13px; border: 1px solid rgba(104,122,174,.11); border-radius: 16px; background: linear-gradient(130deg, rgba(246,248,255,.92), rgba(255,255,255,.66)); }
+    .audio-icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 15px; color: white; background: linear-gradient(145deg,#8195e5,#5c6fc1); box-shadow: 0 9px 22px rgba(89,110,190,.24); font-size: 17px; }
+    .audio-card strong { display: block; color: #27344f; font-size: 11px; }
+    .audio-card small { color: rgba(59,72,97,.5); font-size: 9px; }
+    .audio-bars { display: flex; align-items: center; gap: 2px; height: 22px; margin-top: 5px; }
+    .audio-bars i { width: 3px; border-radius: 3px; background: #9aa9dd; }
+    .audio-bars i:nth-child(1){height:8px}.audio-bars i:nth-child(2){height:15px}.audio-bars i:nth-child(3){height:11px}.audio-bars i:nth-child(4){height:20px}.audio-bars i:nth-child(5){height:13px}.audio-bars i:nth-child(6){height:17px}.audio-bars i:nth-child(7){height:9px}.audio-bars i:nth-child(8){height:14px}.audio-bars i:nth-child(9){height:6px}
+    .primary-small { padding: 9px 12px; border: 0; border-radius: 11px; color: #fff; background: linear-gradient(145deg,#3a4967,#1c273d); box-shadow: 0 8px 18px rgba(41,55,84,.18); font-size: 9px; font-weight: 700; }
+    .primary-small[disabled] { opacity: .55; cursor: default; }
+    .analysis-progress { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin: 14px 0; }
+    .analysis-progress div { height: 5px; overflow: hidden; border-radius: 99px; background: rgba(92,111,165,.10); }
+    .analysis-progress div::after { content: ""; display: block; width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#8294df,#70bca0); transition: width .45s ease; }
+    .analysis-progress div.done::after { width: 100%; }
+    .insight-list { display: grid; gap: 8px; }
+    .insight-item { display: grid; grid-template-columns: 28px 1fr; gap: 10px; padding: 11px; border: 1px solid rgba(104,122,174,.10); border-radius: 14px; background: rgba(248,250,255,.66); }
+    .insight-item i { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; color: #596dbb; background: rgba(228,234,255,.9); font-size: 10px; font-style: normal; font-weight: 800; }
+    .insight-item strong { display: block; margin-bottom: 3px; color: #2e3b56; font-size: 10px; }
+    .insight-item span { color: rgba(59,72,97,.56); font-size: 9px; line-height: 1.65; }
+
+    .priority-list { display: grid; gap: 9px; }
+    .priority-item { display: grid; grid-template-columns: 31px 1fr auto; align-items: center; gap: 10px; padding: 11px; border: 1px solid rgba(103,121,171,.10); border-radius: 14px; background: rgba(250,251,255,.68); }
+    .priority-num { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 10px; color: #5266b4; background: rgba(229,235,255,.88); font-size: 10px; font-weight: 800; }
+    .priority-item strong { display: block; color: #2c3953; font-size: 10px; }
+    .priority-item span { color: rgba(57,70,95,.5); font-size: 9px; }
+    .priority-item em { color: #6780d0; font-size: 9px; font-style: normal; font-weight: 700; }
+    .project-board { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    .project-tile { padding: 14px; border: 1px solid rgba(255,255,255,.9); border-radius: 16px; background: rgba(255,255,255,.56); }
+    .project-tile .tile-top { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 13px; }
+    .project-tile .tile-top span { color: rgba(60,73,98,.47); font-size: 8px; }
+    .project-tile h4 { margin: 0 0 5px; color: #2a3751; font-size: 11px; }
+    .project-tile p { min-height: 30px; margin: 0 0 12px; color: rgba(57,70,95,.5); font-size: 9px; line-height: 1.6; }
+    .progress-line { height: 5px; overflow: hidden; border-radius: 99px; background: rgba(87,108,169,.1); }
+    .progress-line i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#7c90df,#6eb99e); }
+    .tile-foot { display: flex; justify-content: space-between; margin-top: 6px; color: rgba(59,71,96,.48); font-size: 8px; }
+    .decision-card { margin-top: 14px; padding: 14px 15px; border: 1px solid rgba(239,190,126,.2); border-radius: 16px; background: linear-gradient(135deg,rgba(255,247,234,.83),rgba(255,255,255,.65)); }
+    .decision-card b { display: block; margin-bottom: 5px; color: #956c3c; font-size: 10px; }
+    .decision-card p { margin: 0; color: rgba(83,67,50,.62); font-size: 9px; line-height: 1.7; }
+
+    .service-sheet { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    .service-result { padding: 12px; border: 1px solid rgba(99,117,168,.10); border-radius: 14px; background: rgba(248,250,255,.7); }
+    .service-result b { display: block; margin-bottom: 4px; color: #33415c; font-size: 10px; }
+    .service-result span { color: rgba(56,70,95,.52); font-size: 9px; line-height: 1.6; }
+
+    @media (max-width: 920px) {
+      .section-grid { grid-template-columns: 1fr; }
+      .story-metrics, .workflow-rail { grid-template-columns: repeat(2,1fr); }
+      .project-board { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .value-strip { padding: 15px; border-radius: 19px; }
+      .value-strip-top { display: block; }
+      .value-strip h1 { font-size: 23px; }
+      .value-strip .mini-action { margin-top: 11px; }
+      .workflow-step { padding: 9px; }
+      .story-banner { padding: 17px; border-radius: 20px; }
+      .story-banner h2 { font-size: 25px; }
+      .story-metrics { grid-template-columns: 1fr 1fr; }
+      .project-board, .service-sheet { grid-template-columns: 1fr; }
+      .audio-card { grid-template-columns: 42px 1fr; }
+      .audio-card .primary-small { grid-column: 1 / -1; width: 100%; }
+      .analysis-progress { grid-template-columns: repeat(4,1fr); }
+      .priority-item { grid-template-columns: 29px 1fr; }
+      .priority-item em { grid-column: 2; }
+    }
   </style>
 </head>
 <body>
@@ -1508,6 +1630,8 @@
       </div>
       <nav class="nav" aria-label="演示导航">
         <button class="active" data-page="home">私人对话</button>
+        <button data-page="interview">访谈分析</button>
+        <button data-page="workspace">今日工作台</button>
         <button data-page="project">项目全案</button>
         <button data-page="resources">资源地图</button>
         <button data-page="deliverables">交付中心</button>
@@ -1520,6 +1644,18 @@
     <main class="main">
       <section class="page" data-page-panel="home">
         <div class="chat-first">
+          <section class="value-strip" aria-label="服务价值与工作流程">
+            <div class="value-strip-top">
+              <div><p class="agent-kicker">PRIVATE STRATEGY SYSTEM</p><h1>把散落的想法、资源和项目，变成清晰的下一步。</h1><p>它不只回答问题，而是持续理解你的经历、判断和边界，把一次谈话推进成可以使用的事业成果。</p></div>
+              <button class="mini-action" data-open-service>查看21天交付成果</button>
+            </div>
+            <div class="workflow-rail">
+              <div class="workflow-step done"><b>01 深度访谈</b><span>理解目标、经历与边界</span></div>
+              <div class="workflow-step done"><b>02 智能分析</b><span>提取机会、风险与缺口</span></div>
+              <div class="workflow-step current"><b>03 项目企划</b><span>形成路线、预算和材料</span></div>
+              <div class="workflow-step"><b>04 持续执行</b><span>每周跟进并修正方向</span></div>
+            </div>
+          </section>
           <header class="chat-header">
             <div class="agent-identity"><div class="agent-core">知</div><div><p class="agent-kicker">Your Private Agent · Online</p><h2>林岚的私人事业智能体</h2><p>了解你的作品、目标、合作原则与正在推进的项目。</p></div></div>
             <div class="privacy-pill">私人空间 · 重要动作需本人确认</div>
@@ -1528,7 +1664,7 @@
             <div class="chat-stream" id="chatStream" aria-live="polite">
               <div class="message-row assistant">
                 <div class="message-avatar">知</div>
-                <div class="message-bubble"><div class="message-meta">知域智能体 · 刚刚</div><p>早上好，林岚。我已经结合你的90天目标、最近决定和合作方反馈，整理好了今天最值得推进的事情。</p><div class="focus-note"><b>今天的关键判断</b><span>先确定“回声之城”的主办方式和预算上限，再继续扩展方案。否则后面的机构邀约会缺少清晰边界。</span></div></div>
+                <div class="message-bubble"><div class="message-meta">知域智能体 · 刚刚</div><p>早上好，林岚。我已经结合昨天48分钟的访谈、你的90天目标和合作方反馈，整理好了今天最值得推进的事情。</p><div class="focus-note"><b>今天的关键判断</b><span>先确定“回声之城”的主办方式和预算上限，再继续扩展方案。否则后面的机构邀约会缺少清晰边界。</span></div><div class="chat-context-card"><div class="context-head"><strong>昨日访谈已完成分析</strong><em>人工审核通过</em></div><p>识别出3项核心目标、2个潜在风险、6条可用资源和4项下一步行动。</p><div class="context-links"><button data-go-page="interview">查看访谈分析</button><button data-go-page="workspace">打开今日工作台</button></div></div></div>
               </div>
               <div class="message-row assistant">
                 <div class="message-avatar">知</div>
@@ -1548,6 +1684,76 @@
               </div>
             </div>
           </section>
+        </div>
+      </section>
+
+      <section class="page hidden" data-page-panel="interview">
+        <div class="topbar"><div><h2>访谈分析</h2><p>把一次谈话自动整理为目标、判断、资源、风险和行动，不再依靠人工逐字记录。</p></div><div class="date-pill">已获得录音授权 · 虚构演示</div></div>
+        <section class="story-banner">
+          <p class="agent-kicker">FROM CONVERSATION TO CLARITY</p>
+          <h2>48分钟谈话，已经变成一份可以行动的项目底稿。</h2>
+          <p>系统完成录音转写、内容归类、前后信息对照和初步分析；关键判断仍由人工审核，避免把AI的误解直接变成客户决定。</p>
+          <div class="story-metrics"><div class="story-metric"><b>48:32</b><span>原始访谈</span></div><div class="story-metric"><b>3项</b><span>核心目标</span></div><div class="story-metric"><b>6条</b><span>可用资源</span></div><div class="story-metric"><b>4步</b><span>下一步行动</span></div></div>
+        </section>
+        <div class="section-grid">
+          <article class="glass-panel">
+            <div class="panel-head"><div><h3>访谈录音与处理状态</h3><p>演示数据不会上传，也不会联系任何第三方</p></div><span class="status-badge" id="analysisStatus">已完成并审核</span></div>
+            <div class="audio-card">
+              <div class="audio-icon">▶</div>
+              <div><strong>林岚 · 项目深度访谈 01</strong><small>48分32秒 · 2026年7月14日 · 本人已授权</small><div class="audio-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              <button class="primary-small" id="runAnalysis">重新演示自动分析</button>
+            </div>
+            <div class="analysis-progress" aria-label="自动分析进度"><div class="done"></div><div class="done"></div><div class="done"></div><div class="done"></div></div>
+            <div class="insight-list">
+              <div class="insight-item"><i>目</i><div><strong>客户真正想实现的目标</strong><span>不是单纯举办一次展览，而是借“回声之城”建立个人长期研究方向，并形成可持续的机构合作关系。</span></div></div>
+              <div class="insight-item"><i>缺</i><div><strong>目前最关键的信息缺口</strong><span>尚未确定预算上限、主办方式和首展规模，这三个问题会影响后续所有机构沟通。</span></div></div>
+              <div class="insight-item"><i>机</i><div><strong>现有资源中最值得先使用的部分</strong><span>过去十年的城市声音采集、两位策展人关系和现有社区合作基础，比立即寻找新赞助更有价值。</span></div></div>
+              <div class="insight-item"><i>险</i><div><strong>需要提前控制的风险</strong><span>客户同时提出展览、出版、课程和城市巡展，项目范围过大，可能削弱第一阶段作品质量。</span></div></div>
+            </div>
+          </article>
+          <aside class="glass-panel">
+            <div class="panel-head"><div><h3>自动生成的下一步</h3><p>所有对外动作仍需本人确认</p></div><span class="status-badge blue">4项待确认</span></div>
+            <div class="priority-list">
+              <div class="priority-item"><div class="priority-num">01</div><div><strong>确认预算上限</strong><span>在谨慎、标准、扩展三档中选择</span></div><em>本人决定</em></div>
+              <div class="priority-item"><div class="priority-num">02</div><div><strong>缩小首展规模</strong><span>先完成声音装置小样与机构验证</span></div><em>建议接受</em></div>
+              <div class="priority-item"><div class="priority-num">03</div><div><strong>准备机构沟通材料</strong><span>一页项目摘要、三件代表作品、合作需求</span></div><em>智能体起草</em></div>
+              <div class="priority-item"><div class="priority-num">04</div><div><strong>约两位策展人讨论</strong><span>确认研究价值，不急于谈正式合作</span></div><em>等待授权</em></div>
+            </div>
+            <div class="decision-card"><b>为什么不能完全自动决定？</b><p>AI可以快速整理信息和比较方案，但预算、艺术边界、合作对象与对外承诺必须由客户本人确认。高端服务的价值，是效率和责任同时存在。</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page hidden" data-page-panel="workspace">
+        <div class="topbar"><div><h2>今日工作台</h2><p>不用重新翻找聊天记录，一眼看清项目、等待事项、风险和今天该做什么。</p></div><div class="date-pill">2026年7月15日 · 周三</div></div>
+        <section class="story-banner">
+          <p class="agent-kicker">YOUR PRIVATE OPERATING DESK</p>
+          <h2>今天只需要你亲自决定三件事。</h2>
+          <p>资料整理、版本比较、会谈提纲和进度更新已经完成。你的时间应该留给判断、关系和真正重要的创作。</p>
+          <div class="story-metrics"><div class="story-metric"><b>3</b><span>需要本人决定</span></div><div class="story-metric"><b>7</b><span>智能体处理中</span></div><div class="story-metric"><b>2</b><span>等待他人回复</span></div><div class="story-metric"><b>1</b><span>风险需要关注</span></div></div>
+        </section>
+        <div class="grid">
+          <article class="glass-panel span-12">
+            <div class="panel-head"><div><h3>当前项目</h3><p>重要程度、进度和下一步保持同步</p></div><span class="status-badge blue">自动更新于 09:20</span></div>
+            <div class="project-board">
+              <div class="project-tile"><div class="tile-top"><span>旗舰项目</span><span>优先级 A</span></div><h4>回声之城</h4><p>展览定位、机构合作与90天执行方案</p><div class="progress-line"><i style="width:62%"></i></div><div class="tile-foot"><span>进度 62%</span><span>下一步：预算确认</span></div></div>
+              <div class="project-tile"><div class="tile-top"><span>内容资产</span><span>优先级 B</span></div><h4>十年声音档案</h4><p>整理旧录音、授权状态和可使用片段</p><div class="progress-line"><i style="width:38%"></i></div><div class="tile-foot"><span>进度 38%</span><span>智能体处理中</span></div></div>
+              <div class="project-tile"><div class="tile-top"><span>长期建设</span><span>优先级 C</span></div><h4>个人研究档案</h4><p>建立作品、经历、观点和合作关系体系</p><div class="progress-line"><i style="width:74%"></i></div><div class="tile-foot"><span>进度 74%</span><span>本周更新完成</span></div></div>
+            </div>
+          </article>
+          <article class="glass-panel span-7">
+            <div class="panel-head"><div><h3>今天需要本人处理</h3><p>其余事项由系统准备或等待外部回复</p></div></div>
+            <div class="priority-list">
+              <div class="priority-item"><div class="priority-num">01</div><div><strong>从三档预算中确认一档</strong><span>预计需要 12 分钟 · 方案比较已准备</span></div><em>查看比较</em></div>
+              <div class="priority-item"><div class="priority-num">02</div><div><strong>选择首轮联系的两家机构</strong><span>预计需要 8 分钟 · 匹配理由已整理</span></div><em>查看资源</em></div>
+              <div class="priority-item"><div class="priority-num">03</div><div><strong>审核会谈开场文字</strong><span>预计需要 5 分钟 · 保留克制表达</span></div><em>审核文稿</em></div>
+            </div>
+          </article>
+          <article class="glass-panel span-5">
+            <div class="panel-head"><div><h3>本周关键提醒</h3><p>从访谈和项目变化中自动识别</p></div><span class="status-badge blue">1项风险</span></div>
+            <div class="decision-card" style="margin-top:0"><b>项目范围正在扩大</b><p>新增出版和巡展想法后，第一阶段预计工作量增加43%。建议暂不纳入当前方案，保留为第二阶段。</p></div>
+            <div class="chat-context-card"><div class="context-head"><strong>等待外部回复</strong><em>2项</em></div><p>声音实验室的小样时间；城市档案计划的资料合作条件。</p></div>
+          </article>
         </div>
       </section>
 
@@ -1605,16 +1811,47 @@
       modal.classList.remove('hidden');
     });
 
-    document.querySelectorAll('.nav button').forEach(button => {
+    function setPage(page) {
+      document.querySelectorAll('.nav button').forEach(item => item.classList.toggle('active', item.dataset.page === page));
+      const activeButton = document.querySelector(`.nav button[data-page="${page}"]`);
+      if (activeButton) activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      document.querySelectorAll('[data-page-panel]').forEach(panel => panel.classList.toggle('hidden', panel.dataset.pagePanel !== page));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.nav button').forEach(button => button.addEventListener('click', () => setPage(button.dataset.page)));
+    document.querySelectorAll('[data-go-page]').forEach(button => button.addEventListener('click', () => setPage(button.dataset.goPage)));
+
+    document.querySelectorAll('[data-open-service]').forEach(button => {
       button.addEventListener('click', () => {
-        document.querySelectorAll('.nav button').forEach(item => item.classList.remove('active'));
-        button.classList.add('active');
-        button.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        const page = button.dataset.page;
-        document.querySelectorAll('[data-page-panel]').forEach(panel => panel.classList.toggle('hidden', panel.dataset.pagePanel !== page));
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        modalTitle.textContent = '21天私人事业系统 · 交付成果';
+        modalBody.innerHTML = `<h4>客户购买的是一套可以使用的事业成果</h4><div class="service-sheet"><div class="service-result"><b>深度访谈与分析</b><span>理解经历、目标、资源、困难和不能妥协的边界。</span></div><div class="service-result"><b>私人资料体系</b><span>整理作品、项目、关系和重要决定，建立本人可控制的记忆。</span></div><div class="service-result"><b>一个旗舰项目全案</b><span>包含定位、路径、预算、风险与90天执行安排。</span></div><div class="service-result"><b>三类正式材料</b><span>企划书、会谈材料和行动预算表，可直接用于推进项目。</span></div><div class="service-result"><b>私人智能体入口</b><span>持续对话、研究、起草、整理和提醒，不只是一次性交付。</span></div><div class="service-result"><b>30天调整支持</b><span>根据真实反馈修正资料、判断和项目安排。</span></div></div><div class="disclaimer">演示价格从人民币20,000元起。服务范围、修改次数、使用期限和任何额外费用均应在签约前写清楚；不自动扣费，不以难懂的Token向客户临时收费。</div>`;
+        modal.classList.remove('hidden');
       });
     });
+
+    const runAnalysis = document.getElementById('runAnalysis');
+    const analysisStatus = document.getElementById('analysisStatus');
+    if (runAnalysis) {
+      runAnalysis.addEventListener('click', () => {
+        const bars = Array.from(document.querySelectorAll('.analysis-progress div'));
+        runAnalysis.disabled = true;
+        runAnalysis.textContent = '正在分析…';
+        analysisStatus.textContent = '读取录音';
+        analysisStatus.classList.add('blue');
+        bars.forEach(item => item.classList.remove('done'));
+        const labels = ['录音转成文字', '提取目标与资源', '识别风险与缺口', '生成行动建议'];
+        bars.forEach((bar, index) => window.setTimeout(() => {
+          bar.classList.add('done');
+          analysisStatus.textContent = labels[index];
+          if (index === bars.length - 1) window.setTimeout(() => {
+            analysisStatus.textContent = '分析完成 · 等待人工审核';
+            runAnalysis.disabled = false;
+            runAnalysis.textContent = '重新演示自动分析';
+          }, 480);
+        }, 450 * (index + 1)));
+      });
+    }
 
     const demoInput = document.getElementById('demoInput');
     const chatStream = document.getElementById('chatStream');
